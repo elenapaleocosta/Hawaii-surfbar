@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawaii Surfbar | The Rhythm of Nafpaktos</title>
+  <meta name="description" content="Hawaii Surfbar in Nafpaktos, Greece. Where historic stone architecture meets electric neon surf nightlife, premium cocktails, and high-energy music.">
+  <meta name="theme-color" content="#090a0c">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Hawaii Surfbar | The Rhythm of Nafpaktos">
+  <meta property="og:description" content="Historic stone architecture, glowing neon, premium cocktails, and electric nightlife in Nafpaktos.">
+  <meta property="og:image" content="/Pics/IMG_3760.jpeg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/png" href="/hawaii logo.png">
+</head>
+<body class="dark-theme">
+
+  <!-- Scroll Progress Indicator Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Header & Sticky Navigation -->
+  <header id="main-header" class="site-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo-link" aria-label="Hawaii Surfbar Home">
+        <img src="/hawaii logo.png" alt="Hawaii Surfbar Winking Hula Girl Logo" class="nav-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">HAWAII</span>
+          <span class="brand-sub">SURFBAR • NAFPAKTOS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#bar" class="nav-link">The Bar</a></li>
+          <li><a href="#drinks" class="nav-link">Drinks Menu</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Quick Action Buttons -->
+      <div class="header-actions">
+        <a href="tel:6945993601" class="phone-link-btn" title="Call Hawaii Surfbar">
+          <i class="fa-solid fa-phone"></i>
+          <span>694 599 3601</span>
+        </a>
+        <a href="https://maps.app.goo.gl/qG52Wb9Z1fu2sqyA7" target="_blank" rel="noopener noreferrer" class="btn btn-find-us">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Find Us</span>
+        </a>
+        <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-drawer-menu" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <div class="mobile-logo">
+          <img src="/hawaii logo.png" alt="Hawaii Surfbar Logo">
+          <span>HAWAII SURFBAR</span>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+          <li><a href="#bar" class="mobile-nav-link">The Bar</a></li>
+          <li><a href="#drinks" class="mobile-nav-link">Drinks Menu</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact & Location</a></li>
+        </ul>
+        <div class="mobile-actions">
+          <a href="tel:6945993601" class="btn btn-phone-mobile">
+            <i class="fa-solid fa-phone"></i> Call 694 599 3601
+          </a>
+          <a href="https://maps.app.goo.gl/qG52Wb9Z1fu2sqyA7" target="_blank" rel="noopener noreferrer" class="btn btn-find-us-mobile">
+            <i class="fa-solid fa-location-dot"></i> Open Directions in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-container">
+        <img src="/Pics/IMG_3760.jpeg" alt="Hawaii Surfbar DJ booth and bartender shaking cocktails under glowing neon" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge fade-in-up">
+          <span class="pulse-dot"></span>
+          <span class="badge-text">Nafpaktos Nightlife & Surf Culture</span>
+        </div>
+        <h1 class="hero-title fade-in-up delay-1">
+          Hawaii Surfbar
+          <span class="hero-subtitle glow-neon-amber">The Rhythm of Nafpaktos</span>
+        </h1>
+        <p class="hero-description fade-in-up delay-2">
+          Where historic Greek stone architecture collides with electric neon lights, craft cocktails, and pulsating beats until dawn.
+        </p>
+
+        <div class="hero-buttons fade-in-up delay-3">
+          <a href="#drinks" class="btn btn-primary-neon">
+            <i class="fa-solid fa-glass-martini-alt"></i> View Drinks Menu
+          </a>
+          <a href="https://maps.app.goo.gl/qG52Wb9Z1fu2sqyA7" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glow">
+            <i class="fa-solid fa-map-pin"></i> Get Directions
+          </a>
+          <a href="https://instagram.com/hawaii_surfbar" target="_blank" rel="noopener noreferrer" class="btn btn-instagram-accent">
+            <i class="fa-brands fa-instagram"></i> Follow @hawaii_surfbar
+          </a>
+        </div>
+
+        <div class="hero-quick-info fade-in-up delay-4">
+          <div class="info-pill">
+            <i class="fa-solid fa-clock"></i> Open Daily 20:00 - Late
+          </div>
+          <div class="info-pill">
+            <i class="fa-solid fa-cocktail"></i> Signature Tropical & Tequila Cocktails
+          </div>
+          <div class="info-pill">
+            <i class="fa-solid fa-music"></i> Live DJs & Electric Vibe
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-down-hint">
+        <a href="#bar" aria-label="Scroll down">
+          <span>Scroll to explore</span>
+          <i class="fa-solid fa-chevron-down bounce"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- THE BAR & CRAFTSMANSHIP SECTION -->
+    <section id="bar" class="section bar-details-section">
+      <div class="container">
+        
+        <!-- Full-Width Highlight: Metal Shelves & Backlit XABAH Neon -->
+        <div class="bar-hero-showcase borderless-img-card">
+          <img src="/Pics/IMG_2865.jpg" alt="Black metal bar shelves meticulously stocked with premium liquors and backlit by XABAH neon sign" class="bar-hero-img lazy-img" data-lightbox-src="/Pics/IMG_2865.jpg">
+          <div class="bar-hero-overlay">
+            <div class="bar-hero-content">
+              <span class="neon-tag glow-amber">THE CRAFTSMANSHIP</span>
+              <h2 class="bar-hero-title">Premium Liquors & Artful Mixology</h2>
+              <p class="bar-hero-subtitle">
+                From top-shelf Hendrick's Gin and Campari to rare Tequilas, our bar shelves are curated for connoisseurs of fine night spirits.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DRINKS MENU SECTION -->
+    <section id="drinks" class="section drinks-menu-section">
+      <div class="container">
+        
+        <!-- Intro Hero Banner for Drinks Menu -->
+        <div class="drinks-header-banner borderless-img-card">
+          <img src="/Pics/IMG_2868.jpg" alt="Tall iced pink grapefruit cocktail on wooden bar top with blurred warm lights" class="drinks-banner-img lazy-img" data-lightbox-src="/Pics/IMG_2868.jpg">
+          <div class="drinks-banner-overlay">
+            <div class="drinks-banner-text text-center">
+              <span class="section-tag glow-pale-blue">THE TASTE OF HAWAII</span>
+              <h2 class="section-title">Drinks & Cocktails Menu</h2>
+              <p class="section-subtitle">
+                Handcrafted signature cocktails, ice-chilled shots, and ultra-premium spirits.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Filter Controls -->
+        <div class="drinks-menu-wrapper">
+          <div class="menu-tabs-container">
+            <button class="menu-tab-btn active" data-category="all">
+              <i class="fa-solid fa-list-ul"></i> All Drinks
+            </button>
+            <button class="menu-tab-btn" data-category="signatures">
+              <i class="fa-solid fa-cocktail"></i> Signature Cocktails
+            </button>
+            <button class="menu-tab-btn" data-category="shots">
+              <i class="fa-solid fa-fire"></i> Shots & Fire
+            </button>
+            <button class="menu-tab-btn" data-category="spirits">
+              <i class="fa-solid fa-bottle-droplet"></i> Premium Spirits
+            </button>
+            <button class="menu-tab-btn" data-category="wine-beer">
+              <i class="fa-solid fa-beer-mug-empty"></i> Beer & Wines
+            </button>
+          </div>
+
+          <!-- Search Bar for quick menu filtering -->
+          <div class="menu-search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="menu-search-input" placeholder="Search drinks by name or ingredient (e.g. Tequila, Grapefruit, Hendrick's)..." aria-label="Search drinks menu">
+            <button id="clear-search-btn" class="clear-search-btn" aria-label="Clear search" style="display: none;">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Drinks Items Grid -->
+          <div id="drinks-grid" class="drinks-items-grid">
+            
+            <!-- SIGNATURE COCKTAILS -->
+            <div class="drink-card-item" data-category="signatures">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Pink Grapefruit Paloma <span class="drink-badge badge-house">House Favorite</span></h3>
+                  <span class="drink-price">€10.00</span>
+                </div>
+                <p class="drink-description">
+                  Reposado Tequila, fresh lime juice, pink grapefruit soda, chili-salt rim, served tall over crushed crystal ice.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Tequila</span>
+                  <span class="tag">Citrus</span>
+                  <span class="tag">Refreshing</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="signatures">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">XABAH Sunset <span class="drink-badge badge-neon">Neon Special</span></h3>
+                  <span class="drink-price">€11.00</span>
+                </div>
+                <p class="drink-description">
+                  Dark Aged Bacardí Rum, fresh passionfruit, organic pineapple juice, lime juice, dash of Angostura, float of dark spiced rum.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Aged Rum</span>
+                  <span class="tag">Tropical</span>
+                  <span class="tag">Tiki Vibe</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="signatures">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Speak Hawaii Tequila Kiss</h3>
+                  <span class="drink-price">€10.50</span>
+                </div>
+                <p class="drink-description">
+                  Blanco Tequila, elderflower liqueur, fresh crushed pineapple, agave nectar, lime, rimmed with organic coconut flakes.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Tequila</span>
+                  <span class="tag">Pineapple</span>
+                  <span class="tag">Exotic</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="signatures">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Hendrick’s Stone Botanical</h3>
+                  <span class="drink-price">€11.00</span>
+                </div>
+                <p class="drink-description">
+                  Hendrick's Gin, cucumber ribbon, fresh rose water spray, premium tonic water, cracked black pepper accent.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Hendrick's</span>
+                  <span class="tag">Botanical</span>
+                  <span class="tag">Crisp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="signatures">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Nafpaktos Surf Espresso Martini</h3>
+                  <span class="drink-price">€10.50</span>
+                </div>
+                <p class="drink-description">
+                  Vodka, freshly pulled espresso shot, Kahlúa liqueur, vanilla bean syrup, shaken intensely cold with coffee beans top.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Vodka</span>
+                  <span class="tag">Espresso</span>
+                  <span class="tag">Energizing</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="signatures">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Smoked Campari Negroni</h3>
+                  <span class="drink-price">€11.00</span>
+                </div>
+                <p class="drink-description">
+                  Campari Bitter, London Dry Gin, Sweet Vermouth, infused with orange peel oil and subtle woodsmoke.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Campari</span>
+                  <span class="tag">Classic</span>
+                  <span class="tag">Bittersweet</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SHOTS & FIRE -->
+            <div class="drink-card-item" data-category="shots">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Hawaii Kiss Shot <span class="drink-badge badge-popular">Must Try</span></h3>
+                  <span class="drink-price">€4.00</span>
+                </div>
+                <p class="drink-description">
+                  Chilled Coconut Rum, passionfruit liqueur, lime drop. Smooth, tropical, and sweet.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Shot</span>
+                  <span class="tag">Tropical</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="shots">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Tequila Gold Fire Shot</h3>
+                  <span class="drink-price">€4.00</span>
+                </div>
+                <p class="drink-description">
+                  Premium Jose Cuervo Gold Tequila served ice-chilled with orange slice and cinnamon powder.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Tequila</span>
+                  <span class="tag">Cinnamon</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="shots">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">JägerBomb Surf Drop</h3>
+                  <span class="drink-price">€5.00</span>
+                </div>
+                <p class="drink-description">
+                  Ice-cold Jägermeister dropped into energy drink. The late-night party starter.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">High Energy</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="shots">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Shots Board (Tray of 6)</h3>
+                  <span class="drink-price">€20.00</span>
+                </div>
+                <p class="drink-description">
+                  Choice of 6 mixed house shots served on custom wooden surf tray.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Group Fun</span>
+                  <span class="tag">Special</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PREMIUM SPIRITS -->
+            <div class="drink-card-item" data-category="spirits">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Hendrick’s Gin & Tonic</h3>
+                  <span class="drink-price">€9.50</span>
+                </div>
+                <p class="drink-description">
+                  Served with fresh cucumber, black pepper, and premium tonic.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Gin</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="spirits">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Don Julio / 1800 Tequila Reposado</h3>
+                  <span class="drink-price">€11.00</span>
+                </div>
+                <p class="drink-description">
+                  100% Blue Agave premium aged tequila served neat or on giant ice rock.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Premium Tequila</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="spirits">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Bacardí Ocho 8 Year Aged Rum</h3>
+                  <span class="drink-price">€10.00</span>
+                </div>
+                <p class="drink-description">
+                  Rich dark rum with notes of prune, oat, and vanilla. Served over rock ice.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Aged Rum</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="spirits">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Single Malt Scotch / Bourbon Whiskey</h3>
+                  <span class="drink-price">€10.50</span>
+                </div>
+                <p class="drink-description">
+                  Selection of Lagavulin, Glenfiddich, Jack Daniel's Single Barrel.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Whiskey</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WINE & BEER -->
+            <div class="drink-card-item" data-category="wine-beer">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Greek Craft Draught Beer</h3>
+                  <span class="drink-price">€5.00 / €6.50</span>
+                </div>
+                <p class="drink-description">
+                  Ice-cold fresh tap beer served in frosted glass tankard.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Beer</span>
+                  <span class="tag">Draft</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="wine-beer">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Corona / Desperados Tequila Beer</h3>
+                  <span class="drink-price">€6.00</span>
+                </div>
+                <p class="drink-description">
+                  Served ice cold with fresh lime wedge.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Imported Beer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drink-card-item" data-category="wine-beer">
+              <div class="drink-card-inner">
+                <div class="drink-header-row">
+                  <h3 class="drink-title">Greek White / Rose Wine Glass</h3>
+                  <span class="drink-price">€6.00</span>
+                </div>
+                <p class="drink-description">
+                  Chilled crisp Assyrtiko or fresh Rose from local vineyards.
+                </p>
+                <div class="drink-tags">
+                  <span class="tag">Wine</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Empty search result state -->
+          <div id="no-search-results" class="no-results-box" style="display: none;">
+            <i class="fa-solid fa-glass-water-drop icon-no-res"></i>
+            <p>No drinks matching your search. Try searching for "Tequila", "Gin", or "Cocktail".</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag glow-pale-blue">FIND & VISIT US</span>
+          <h2 class="section-title">Location & Contact</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-single-container">
+          
+          <!-- Contact Details Glass Card -->
+          <div class="contact-info-card card-glass-body text-center">
+            
+            <div class="contact-header-block center-block">
+              <img src="/hawaii logo.png" alt="Hawaii Surfbar Logo" class="contact-card-logo">
+              <div>
+                <h3 class="contact-venue-name">HAWAII SURFBAR</h3>
+                <p class="contact-venue-sub">Nafpaktos, Greece</p>
+              </div>
+            </div>
+
+            <div class="contact-grid-row">
+              
+              <div class="contact-item-centered">
+                <div class="contact-icon glow-amber"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-details">
+                  <h4>Address & Location</h4>
+                  <p>Nafpaktos Port / Center, Greece</p>
+                </div>
+              </div>
+
+              <div class="contact-item-centered">
+                <div class="contact-icon glow-orange"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-details">
+                  <h4>Direct Phone</h4>
+                  <a href="tel:6945993601" class="contact-phone-number">694 599 3601</a>
+                </div>
+              </div>
+
+              <div class="contact-item-centered">
+                <div class="contact-icon glow-blue"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-details">
+                  <h4>Email Address</h4>
+                  <a href="mailto:hawaiinafpaktos@gmail.com" class="contact-email-link">hawaiinafpaktos@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item-centered">
+                <div class="contact-icon glow-amber"><i class="fa-brands fa-instagram"></i></div>
+                <div class="contact-details">
+                  <h4>Instagram</h4>
+                  <a href="https://instagram.com/hawaii_surfbar" target="_blank" rel="noopener noreferrer" class="contact-social-link">
+                    @hawaii_surfbar <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="contact-action-row">
+              <a href="https://maps.app.goo.gl/qG52Wb9Z1fu2sqyA7" target="_blank" rel="noopener noreferrer" class="btn btn-primary-neon btn-lg-glow">
+                <i class="fa-solid fa-location-dot"></i> Open Location in Google Maps
+              </a>
+              <a href="tel:6945993601" class="btn btn-outline-glow btn-lg-glow">
+                <i class="fa-solid fa-phone"></i> Call 694 599 3601
+              </a>
+              <a href="https://instagram.com/hawaii_surfbar" target="_blank" rel="noopener noreferrer" class="btn btn-instagram-accent btn-lg-glow">
+                <i class="fa-brands fa-instagram"></i> Instagram @hawaii_surfbar
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX MODAL FOR ENLARGING PHOTOS -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Photo Lightbox">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous photo">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next photo">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Enlarged view">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER COPYRIGHT & QUICK NAV -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="/hawaii logo.png" alt="Hawaii Surfbar" class="footer-logo">
+        <p class="footer-tagline">Historic Greek Stone Architecture & Electric Surf Culture</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#bar">The Bar</a>
+        <a href="#drinks">Drinks Menu</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://instagram.com/hawaii_surfbar" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="tel:6945993601" aria-label="Phone">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="mailto:hawaiinafpaktos@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Hawaii Surfbar, Nafpaktos. All Rights Reserved.</p>
+        <p class="credits-text">Crafted with electric neon passion & fine drinks.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
