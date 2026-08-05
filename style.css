@@ -1377,20 +1377,28 @@ h1, h2, h3, h4, h5, h6 {
    12. Contact & Footer Section
    -------------------------------------------------------------------------- */
 .contact-single-container {
-  max-width: 860px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
 .contact-header-block.center-block {
   justify-content: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-card-logo {
+  height: 52px;
+}
+
+.contact-venue-name {
+  font-size: 1.3rem;
 }
 
 .contact-grid-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
 }
 
 .contact-item-centered {
@@ -1398,36 +1406,55 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.85rem;
+  gap: 0.6rem;
+  padding: 1.25rem 1rem;
+  background: rgba(9, 10, 12, 0.5);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.contact-item-centered:hover {
+  border-color: var(--border-neon-amber);
+  transform: translateY(-2px);
 }
 
 .contact-item-centered .contact-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  font-size: 1.4rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 1.15rem;
 }
 
 .contact-item-centered h4 {
-  font-size: 1rem;
-  color: #ffffff;
-  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
+}
+
+.contact-item-centered p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 500;
 }
 
 .contact-phone-number {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--neon-orange);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--neon-amber);
   display: block;
 }
 
 .contact-email-link, .contact-link, .contact-social-link {
   color: var(--pale-vintage-blue);
+  font-size: 0.925rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .contact-email-link:hover, .contact-link:hover, .contact-social-link:hover {
@@ -1439,16 +1466,17 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
   border-top: 1px solid var(--border-glass);
-  padding-top: 2.5rem;
+  padding-top: 2rem;
 }
 
-.btn-lg-glow {
-  padding: 1rem 2.25rem;
-  font-size: 1.05rem;
-  font-weight: 700;
+.btn-contact-action {
+  padding: 0.75rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 50px;
 }
 
 /* Footer */
