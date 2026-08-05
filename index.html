@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Hawaii Surfbar | The Rhythm of Nafpaktos</title>
   <meta name="description" content="Hawaii Surfbar in Nafpaktos, Greece. Where historic stone architecture meets electric neon surf nightlife, premium cocktails, and high-energy music.">
   <meta name="theme-color" content="#090a0c">
@@ -210,7 +210,7 @@
           <!-- Search Bar for quick menu filtering -->
           <div class="menu-search-box">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="menu-search-input" placeholder="Search drinks by name or ingredient (e.g. Tequila, Grapefruit, Hendrick's)..." aria-label="Search drinks menu">
+            <input type="text" id="menu-search-input" placeholder="Search drinks (e.g. Tequila, Gin)..." aria-label="Search drinks menu">
             <button id="clear-search-btn" class="clear-search-btn" aria-label="Clear search" style="display: none;">
               <i class="fa-solid fa-xmark"></i>
             </button>
@@ -605,6 +605,26 @@
       <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
   </div>
+
+  <!-- Floating Mobile Quick Action Bottom Bar -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Quick Action Navigation">
+    <a href="tel:6945993601" class="mobile-bar-btn">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="#drinks" class="mobile-bar-btn active">
+      <i class="fa-solid fa-cocktail"></i>
+      <span>Drinks</span>
+    </a>
+    <a href="https://maps.app.goo.gl/qG52Wb9Z1fu2sqyA7" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn btn-maps">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Maps</span>
+    </a>
+    <a href="https://instagram.com/hawaii_surfbar" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
+      <i class="fa-brands fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+  </nav>
 
   <!-- FOOTER COPYRIGHT & QUICK NAV -->
   <footer class="site-footer">
