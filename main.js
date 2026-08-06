@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollProgress = document.getElementById('scroll-progress');
   const mobileToggleBtn = document.getElementById('mobile-menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-menu-overlay');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
   const navLinks = document.querySelectorAll('.nav-link');
+  const mobileBottomBtns = document.querySelectorAll('.mobile-bar-btn');
   const sections = document.querySelectorAll('section[id]');
   
   // Drinks Menu Elements
+  const drinksModal = document.getElementById('drinks-menu-modal');
+  const closeDrinksModalBtn = document.getElementById('close-drinks-modal-btn');
+  const toggleDrinksMenuBtn = document.getElementById('toggle-drinks-menu-btn');
+  const drinksMenuLinks = document.querySelectorAll('a[href="#drinks"]');
   const tabBtns = document.querySelectorAll('.menu-tab-btn');
   const drinkCards = document.querySelectorAll('.drink-card-item');
   const searchInput = document.getElementById('menu-search-input');
@@ -28,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxPrev = document.getElementById('lightbox-prev');
   const lightboxNext = document.getElementById('lightbox-next');
 
-  // Build Lightbox array from all feature images in Atmosphere, Bar, Drinks
+  // Build Lightbox array from feature images
   const featureImages = document.querySelectorAll('.feature-img[data-lightbox-src], .bar-hero-img[data-lightbox-src], .drinks-banner-img[data-lightbox-src]');
   
   let galleryData = [];
@@ -62,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       header?.classList.remove('scrolled');
     }
 
-    // Highlight active section in navigation
+    // Highlight active section in desktop navigation & mobile bottom bar
     let currentSectionId = '';
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 120;
@@ -79,6 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
           link.classList.add('active');
         }
       });
+
+      mobileBottomBtns.forEach(btn => {
+        const href = btn.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          if (href === `#${currentSectionId}`) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        }
+      });
     }
   };
 
@@ -86,26 +103,31 @@ document.addEventListener('DOMContentLoaded', () => {
   handleScroll(); // Initial check
 
   // --------------------------------------------------------------------------
-  // 3. Mobile Navigation Drawer Toggle
+  // 3. Mobile Navigation Drawer Toggle & Overlay
   // --------------------------------------------------------------------------
   const toggleMobileMenu = (open) => {
     const shouldOpen = open !== undefined ? open : !mobileMenu?.classList.contains('is-open');
     if (shouldOpen) {
       mobileMenu?.classList.add('is-open');
+      mobileOverlay?.classList.add('is-open');
       mobileToggleBtn?.classList.add('is-active');
       mobileToggleBtn?.setAttribute('aria-expanded', 'true');
       mobileMenu?.setAttribute('aria-hidden', 'false');
+      mobileOverlay?.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     } else {
       mobileMenu?.classList.remove('is-open');
+      mobileOverlay?.classList.remove('is-open');
       mobileToggleBtn?.classList.remove('is-active');
       mobileToggleBtn?.setAttribute('aria-expanded', 'false');
       mobileMenu?.setAttribute('aria-hidden', 'true');
+      mobileOverlay?.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     }
   };
 
   mobileToggleBtn?.addEventListener('click', () => toggleMobileMenu());
+  mobileOverlay?.addEventListener('click', () => toggleMobileMenu(false));
 
   // Close mobile drawer when link is clicked
   mobileNavLinks.forEach(link => {
@@ -116,7 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     if (mobileMenu?.classList.contains('is-open') && 
         !mobileMenu.contains(e.target) && 
-        !mobileToggleBtn?.contains(e.target)) {
+        !mobileToggleBtn?.contains(e.target) &&
+        !mobileOverlay?.contains(e.target)) {
       toggleMobileMenu(false);
     }
   });
@@ -128,8 +151,60 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --------------------------------------------------------------------------
-  // 4. Interactive Drinks Menu Filtering & Search
+  // 4. Interactive Drinks Menu Filtering, Search & Modal Overlay Tab Control
   // --------------------------------------------------------------------------
+  const openDrinksMenu = () => {
+    if (!drinksModal) return;
+    drinksModal.classList.add('is-open');
+    drinksModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (toggleDrinksMenuBtn) {
+      toggleDrinksMenuBtn.setAttribute('aria-expanded', 'true');
+    }
+  };
+
+  const closeDrinksMenu = () => {
+    if (!drinksModal) return;
+    drinksModal.classList.remove('is-open');
+    drinksModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (toggleDrinksMenuBtn) {
+      toggleDrinksMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  toggleDrinksMenuBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    openDrinksMenu();
+  });
+
+  closeDrinksModalBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeDrinksMenu();
+  });
+
+  // Close when clicking modal backdrop overlay
+  drinksModal?.addEventListener('click', (e) => {
+    if (e.target === drinksModal) {
+      closeDrinksMenu();
+    }
+  });
+
+  // Close when pressing Esc key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drinksModal?.classList.contains('is-open')) {
+      closeDrinksMenu();
+    }
+  });
+
+  // Auto-open menu modal when any 'Drinks Menu' button / nav link is clicked
+  drinksMenuLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openDrinksMenu();
+    });
+  });
+
   let activeCategory = 'all';
   let searchQuery = '';
 
@@ -185,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --------------------------------------------------------------------------
-  // 5. Lightbox Modal Integration
+  // 5. Lightbox Modal Integration & Touch Gestures
   // --------------------------------------------------------------------------
   const openLightbox = (index) => {
     if (!lightboxModal || galleryData.length === 0) return;
@@ -241,6 +316,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') navigateLightbox('next');
     if (e.key === 'ArrowLeft') navigateLightbox('prev');
   });
+
+  // Touch Swipe Gestures for Mobile Lightbox
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  lightboxModal?.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  lightboxModal?.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleLightboxSwipe();
+  }, { passive: true });
+
+  const handleLightboxSwipe = () => {
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+    const minSwipeDistance = 45;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (Math.abs(deltaX) > minSwipeDistance) {
+        if (deltaX < 0) {
+          navigateLightbox('next');
+        } else {
+          navigateLightbox('prev');
+        }
+      }
+    } else {
+      if (deltaY > minSwipeDistance * 1.5) {
+        closeLightbox();
+      }
+    }
+  };
 
   // --------------------------------------------------------------------------
   // 6. Scroll Triggered Entrance Animations (IntersectionObserver)
