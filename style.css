@@ -1980,12 +1980,38 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .drinks-header-banner {
-    height: 220px;
+    height: 280px;
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius-md);
   }
 
-  .drinks-menu-wrapper {
-    padding: 1.25rem 0.85rem;
-    border-radius: var(--radius-md);
+  .drinks-banner-overlay {
+    padding: 1.25rem 1rem;
+  }
+
+  .drinks-banner-text .section-tag {
+    font-size: 0.65rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.12em;
+  }
+
+  .drinks-banner-text .section-title {
+    font-size: 1.45rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
+  }
+
+  .drinks-banner-text .section-subtitle {
+    font-size: 0.825rem;
+    margin-bottom: 0.85rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .drinks-banner-text .btn-toggle-menu {
+    padding: 0.55rem 1.15rem;
+    min-height: 40px;
+    font-size: 0.825rem;
   }
 
   /* Horizontal swipeable category menu tabs on phone */
@@ -2109,6 +2135,24 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.7rem;
     padding: 0.28rem 0.6rem;
     justify-content: center;
+  }
+
+  .drinks-header-banner {
+    height: 270px;
+  }
+
+  .drinks-banner-overlay {
+    padding: 1rem 0.85rem;
+  }
+
+  .drinks-banner-text .section-title {
+    font-size: 1.3rem;
+  }
+
+  .drinks-banner-text .section-subtitle {
+    font-size: 0.775rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
   }
 }
 
