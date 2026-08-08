@@ -815,6 +815,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform var(--transition-slow);
 }
 
+.img-pos-bottom {
+  object-position: bottom center !important;
+}
+
 .borderless-img-card:hover .feature-img {
   transform: scale(1.06);
 }
