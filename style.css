@@ -1036,7 +1036,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bento-card {
   position: relative;
-  height: 280px;
+  height: 350px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--bg-card-dark);
